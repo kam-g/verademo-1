@@ -1,4 +1,8 @@
+name:  Veracode Static Analysis Pipeline Scan
+
+
 on:
+
   push:
     branches: [ master ]
   pull_request:
