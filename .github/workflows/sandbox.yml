@@ -36,7 +36,7 @@ jobs:
       uses: veracode/veracode-uploadandscan-action@master
       id: upload_and_scan
       with:
-        appname: 'Verademo'
+        appname: 'Verademo_GitHub'
         version: '${{ github.run_id }}'
         filepath: 'target/verademo.war'
         vid: '${{ secrets.VERACODE_API_ID }}'
