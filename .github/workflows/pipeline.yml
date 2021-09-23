@@ -1,6 +1,5 @@
 name:  Veracode Static Analysis Pipeline Scan
 
-
 on:
 
   push:
