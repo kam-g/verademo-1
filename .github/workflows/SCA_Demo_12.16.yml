@@ -1,0 +1,24 @@
+on: 
+  push:
+    paths-ignore:
+      - "README.md"
+  schedule:
+
+
+jobs:
+  veracode-sca-task:
+    runs-on: ubuntu-latest
+    name: Scan repository with Veracode SCA
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        
+      - name: Run Veracode SCA
+        env:
+          SRCCLR_API_TOKEN: ${{ secrets.SRCCLR_API_TOKEN }}
+        uses: veracode/veracode-sca@v2.0.65
+        with:
+          github_token: ${{ secrets.GITHUBBB_TOKEN }}
+          quick: true
+          create-issues: true 
